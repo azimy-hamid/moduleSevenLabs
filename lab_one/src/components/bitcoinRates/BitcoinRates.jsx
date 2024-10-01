@@ -51,7 +51,7 @@ function BitcoinRates() {
             {options}
           </select>
           <small className="form-text text-muted">
-            The API might take some latency to get the amount :)
+            The API might have some latency to get the amount :)
           </small>
         </label>
         <p className="text-center mt-4 display-6">
