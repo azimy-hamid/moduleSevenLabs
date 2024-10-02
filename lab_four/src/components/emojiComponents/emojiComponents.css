@@ -1,0 +1,72 @@
+/* emojiComponents.css */
+
+body {
+  background-color: #f0f4f8; /* Light background for better contrast */
+  font-family: "Arial", sans-serif; /* Modern font */
+}
+
+.emoji-container {
+  background-color: #fff;
+  width: 380px; /* Set a fixed width */
+  height: 380px; /* Set the same height for a square shape */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center align text */
+  border-radius: 10px; /* Rounded corners for aesthetics */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.emoji-display {
+  font-size: 100px; /* Large emoji */
+  margin-bottom: 20px; /* Spacing below emoji */
+  transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.emoji-buttons {
+  display: flex;
+  gap: 10px; /* Spacing between buttons */
+  margin-bottom: 20px; /* Spacing below button row */
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mood-button {
+  background-color: #3587df; /* Bootstrap primary color */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Button padding */
+  font-size: 15px; /* Larger emoji size for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.mood-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+.random-button {
+  background-color: #28a745; /* Green color for random button */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px 25px; /* Button padding */
+  font-size: 20px; /* Button font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.random-button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.mood-description {
+  font-size: 20px; /* Mood text size */
+  margin-top: 20px; /* Spacing above mood text */
+  color: #333; /* Dark text for contrast */
+}
