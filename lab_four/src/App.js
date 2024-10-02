@@ -5,19 +5,25 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import NavBar from "./components/nabBar/NavBar";
 import HomePage from "./components/homePage/HomePage";
 import LoginPage from "./components/loginPage/LoginPage";
+import {
+  EmojiContext,
+  EmojiProvider,
+} from "./components/emojiComponents/emojiContext.js";
 
 function App() {
   return (
     <div className="app">
-      <main className="content">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/bitcoin" element={<BitcoinRates />} />
-          <Route path="/emoji" element={<EmojiComponent />} />
-          <Route path="/login" element={<LoginPage />} />
-        </Routes>
-      </main>
+      <EmojiProvider>
+        <main className="content">
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/bitcoin" element={<BitcoinRates />} />
+            <Route path="/emoji" element={<EmojiComponent />} />
+            <Route path="/login" element={<LoginPage />} />
+          </Routes>
+        </main>
+      </EmojiProvider>
     </div>
   );
 }
